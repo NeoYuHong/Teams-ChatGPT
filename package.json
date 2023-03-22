@@ -19,14 +19,12 @@
     "adaptivecards-templating": "2.1.0",
     "botbuilder": "^4.18.0",
     "botbuilder-dialogs": "^4.18.0",
-    "cors": "^2.8.5",
     "isomorphic-fetch": "^3.0.0",
     "openai": "^3.2.1",
     "restify": "^10.0.0",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.13",
     "@types/node": "^14.0.0",
     "@types/restify": "^8.5.5",
     "dotenv": "^16.0.3",

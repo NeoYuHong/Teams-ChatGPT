@@ -1,5 +1,4 @@
 import * as restify from "restify";
-import * as cors from "cors";
 import * as dotenv from 'dotenv'
 dotenv.config()
 
@@ -41,12 +40,6 @@ const bot = new TeamsBot();
 
 // Create HTTP server.
 const server = restify.createServer();
-
-var corsOptions = {
-  origin: 'https://microsoft.com',
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-}
-server.use(cors(corsOptions));
 
 server.use(restify.plugins.bodyParser());
 
