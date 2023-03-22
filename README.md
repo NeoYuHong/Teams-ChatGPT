@@ -3,8 +3,11 @@
 ## Install and run
 
 `git clone https://github.com/NeoYuHong/Teams-ChatGPT.git`
+
 `npm i`
+
 `npm run build`
+
 `npm start`
 
 ## Environent Variable
