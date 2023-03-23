@@ -49,7 +49,6 @@ server.listen(process.env.port || process.env.PORT || 3978, () => {
 
 // Listen for incoming requests.
 server.post("/api/messages", async (req, res) => {
-
   await adapter
     .process(req, res, async (context) => {
       await bot.run(context);
@@ -58,6 +57,7 @@ server.post("/api/messages", async (req, res) => {
       // Error message including "412" means it is waiting for user's consent, which is a normal process of SSO, sholdn't throw this error.
       if (!err.message.includes("412")) {
         console.log(err)
+        res.send(500, "Internal Server Error");
         throw err;
       }
     });
